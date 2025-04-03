@@ -1,0 +1,93 @@
+
+
+  .fields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    margin-top: 38px;
+
+    .field {
+      display: flex;
+      align-items: center;
+      column-gap: 28px;
+      width: 100%;
+      padding: 15px 23px;
+      background-color: #ececec;
+
+      .fieldItem {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        label {
+          font-size: 12px;
+          font-family: sans-serif;
+        }
+
+        input {
+          width: 100%;
+          font-weight: 700;
+          border: none;
+          outline: none;
+          background: none;
+          padding: 6px 1px;
+        }
+      }
+
+      .fieldIcon {
+        i {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    margin: 26px 0;
+
+    .optionsCheckbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 15px;
+      font-family: sans-serif;
+
+      input {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    a {
+      color: #6358dc;
+      font-family: sans-serif;
+    }
+  }
+
+  .loginButton {
+    width: 100%;
+    padding: 27px;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    background-color: #6358dc;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  .loginFooter {
+    margin-top: 47px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: 500;
+
+    a {
+      color: #6358dc;
+    }
+  }

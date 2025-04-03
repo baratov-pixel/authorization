@@ -1,0 +1,28 @@
+.outsiderLoginButton {
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    padding: 25px;
+    margin-bottom: 28px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: #2f2f2f;
+    box-shadow: 0px 4px 10px 0px #00000045;
+    cursor: pointer;
+    background-color: #fff;
+    transition: box-shadow 250ms ease;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 10px 0px #6358df;
+    }
+  }
