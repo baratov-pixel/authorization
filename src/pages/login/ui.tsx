@@ -44,13 +44,14 @@ return (
       </div>
       <div className={styles.loginRight}>
        <OutsiderLogin buttonText={"Login with Google"} imageUrl={"./google-logo.png"} />
-        <h5>Welcome to <span>best Design  School</span></h5>
+        <h5 className={styles.loginRightTitle}>Welcome to <span>best Design  School</span></h5>
         <span className={styles.separator}>OR</span>
          <LoginForm />
       </div>
     </div>
   )
 }
+
 
 
 export default LoginPage
