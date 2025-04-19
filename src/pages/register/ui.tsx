@@ -1,16 +1,16 @@
 import { useContext, useEffect, useState } from 'react'
-import LoginForm from '../../features/loginForm/ui'
-import OutsiderLogin from '../../features/outsiderLogin/ui'
 
-import styles from './style.module.css'
 import { IUserTokenContext, UserTokenContext } from '../../App'
+import styles from './style.module.css'
+import RegisterForm from '../../features/registerForm/ui.tsx'
+import { Link } from 'react-router-dom'
 
 interface IUser {
   picture: string
   email: string
 }
 
-const LoginPage = () => {
+const RegisterPage = () => {
   const { token } = useContext<IUserTokenContext>(UserTokenContext)
   const [user, setUser] = useState<IUser | null>(null)
 
@@ -36,19 +36,18 @@ const LoginPage = () => {
   }, [token])
 
   return (
-    <div className={styles.login}>
-      <div className={styles.loginLeft}>
-        <img src={user ? user.picture : "https://static.vecteezy.com/system/resources/previews/030/985/874/non_2x/anonymous-icon-vector.jpg"} alt="Login Image" />
+    <div className={styles.register}>
+      <div className={styles.registerLeft}>
+        <img src={user ? user.picture : "https://static.vecteezy.com/system/resources/previews/030/985/874/non_2x/anonymous-icon-vector.jpg"} alt="register Image" />
         <h1 className={styles.userName}>{user ? user.email : "You are not authorization!" }</h1>
       </div>
-      <div className={styles.loginRight}>
-        <OutsiderLogin buttonText={"Login with Google"} imageUrl={"./google-logo.png"} />
-        <h5 className={styles.loginRightTitle}>Page for <span className={styles.loginRightTitleMark}>Login</span></h5>
+      <div className={styles.registerRight}>
+        <h5 className={styles.registerRightTitle}>Page for <span className={styles.registerRightTitleMark}>Register</span></h5>
         <span className={styles.separator}>OR</span>
-        <LoginForm />
+        <RegisterForm />
       </div>
     </div>
   )
 }
 
-export default LoginPage
+export default RegisterPage

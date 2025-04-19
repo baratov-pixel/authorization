@@ -1,15 +1,15 @@
 import { useState } from "react";
-import styles from "./styles.module.css";
+import styles from "./style.module.css";
 import { Link } from "react-router-dom";
 
-const LoginForm = () => {
-  const [email, setEmail] = useState("admin1232323@gmail.com");
-  const [password, setPassword] = useState("admin1234");
+const RegisterForm = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:5000/login", {
+    const response = await fetch("http://localhost:5000/sign-in", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -59,19 +59,12 @@ const LoginForm = () => {
           </div>
         </div>
       </div>
-      <div className={styles.options}>
-        <div className={styles.optionsCheckbox}>
-          <input type="checkbox" />
-          Remember me
-        </div>
-        <a href="">Forgot password?</a>
-      </div>
-      <button className={styles.loginButton}>Login</button>
+      <button className={styles.loginButton}>Register</button>
       <p className={styles.loginFooter}>
-      Don't have an account? <Link to="/register">Register</Link>{" "}
+       <Link to ="/login">Login</Link>
       </p>
     </form>
   );
 };
 
-export default LoginForm;
+export default RegisterForm;
